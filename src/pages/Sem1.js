@@ -13,7 +13,7 @@ const Sem1 = () => {
     var value =[ document.getElementById("sub1").value, document.getElementById("sub2").value, document.getElementById("sub3").value, document.getElementById("sub4").value, document.getElementById("sub5").value, document.getElementById("sub6").value,document.getElementById("sub7").value,document.getElementById("sub8").value];
   
 
-    let val = [4,4,4,3,3,1,1,1];
+    let val = [4,4,3,3,3,1,1,1];
     for (var i=0; i<8;i++){
         if(value[i]>=90){
             sum+=val[i]*10
@@ -40,13 +40,14 @@ const Sem1 = () => {
             sum+=val[i]*0
         }
     }    
-    var ans=sum/21;
+    var ans=sum/20;
     setShow(<h1 id = "ans">Your Sgpa {ans.toFixed(2) }</h1>);
  document.getElementById("ans").innerHTML="Your Sgpa = "+ans.toFixed(2);
 
   }
-  return (<>
-    <h1>2022 Scheme <span className='sp'>3rd Sem SGPA</span> Calculator</h1>
+  return (
+  <div>
+    <h1>2022 Scheme <span className='sp'>1st Sem SGPA</span> Calculator</h1>
     <div className='main'>
      
       <div className='card'>
@@ -54,32 +55,33 @@ const Sem1 = () => {
         <input type="numbre" placeholder='Maths Credits - 4x' maxLength={3} onChange={(e)=>setMarkvalue(e.target.value)} id='sub1' required/>
       </div>
         <div className='card2'>
-          <label htmlFor="DDCO">Digital Design And Computer Organization</label><br />
-          <input type="number" placeholder='DDCO Credits - 4x' maxLength={3} id='sub2' required/>
+          <label htmlFor="DDCO">Applied Physics for CSE stream</label><br />
+          <input type="number" placeholder='Physics Credits - 4x' maxLength={3} id='sub2' required/>
         </div>
         <div className='card'>
-          <label htmlFor="OS">Operating System</label><br />
-          <input type="number" placeholder='OS Credits - 4x' maxLength={3}  id='sub3' required / >
+          <label htmlFor="OS">Principles of Programming Using C</label><br />
+          <input type="number" placeholder='C Program Credits - 3x' maxLength={3}  id='sub3' required / >
         </div>
         <div className='card2'>
-          <label htmlFor="DSA">Data Structures and Applications</label><br />
-          <input type="number" placeholder='DSA Credits - 3x' maxLength={3} id='sub4' required />
+          <label htmlFor="DSA">Introduction to Electronics</label><br />
+          <input type="number" placeholder='Electronics Credits - 3x' maxLength={3} id='sub4' required />
         </div>
         <div className='card'>
-          <label htmlFor="Python">Python / JAVA / R</label><br />
-          <input type="number" placeholder='Python Credits - 3x' maxLength={3} id='sub5' required />
+          <label htmlFor="Python">Introduction to Cyber Security</label><br />
+          <input type="number" placeholder='Cyber Security Credits - 3x' maxLength={3} id='sub5' required />
         </div>
         <div className='card2'>
-          <label htmlFor="DSA-L">Data Structures LAB</label><br />
-          <input type="number" placeholder='DSA-L Credits - 1x' maxLength={3} id='sub6' required />
+          <label htmlFor="DSA-L">Communicative English</label><br />
+          <input type="number" placeholder='English Credits - 1x' maxLength={3} id='sub6' required />
         </div>
         <div className='card'>
-          <label htmlFor="Social">Social Connect & Responsibility</label><br />
-          <input type="number" placeholder='Social Credits - 1x' maxLength={3}  id='sub7' required />
+          <label htmlFor="Social">Samskrutika Kannada/ Balake
+Kannada</label><br />
+          <input type="number" placeholder='kannada Credits - 1x' maxLength={3}  id='sub7' required />
         </div>
         <div className='card2'>
-          <label htmlFor="DDCo">Excel / Ethics / Git </label><br />
-          <input type="number" placeholder='Excel Credits - 1x' maxLength={3} id='sub8' required />
+          <label htmlFor="DDCo">Innovation and Design Thinking </label><br />
+          <input type="number" placeholder='IDT Credits - 1x' maxLength={3} id='sub8' required />
         </div>
         <button onClick={()=>{
           Check()
@@ -88,7 +90,7 @@ const Sem1 = () => {
         <h1 id="ans"></h1>
     
     </div>
-    </>
+    </div>
   )
 
 }
